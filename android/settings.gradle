@@ -1,0 +1,3 @@
+rootProject.name = 'ReactReduxNavigation'
+
+include ':app'
