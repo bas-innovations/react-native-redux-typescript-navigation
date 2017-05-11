@@ -12,7 +12,7 @@ import { createStore } from 'redux';
 import AppReducer from './src/reducers';
 import AppWithNavigationState from './src/navigators/AppNavigator';
 
-export default class ReactReduxNavigation extends Component {
+export default class ReactReduxTSNavigation extends Component {
   store = createStore(AppReducer);
 
   render() {
@@ -24,5 +24,5 @@ export default class ReactReduxNavigation extends Component {
   }
 }
 
-AppRegistry.registerComponent('ReactReduxNavigation', () => ReactReduxNavigation);
+AppRegistry.registerComponent('ReactReduxTSNavigation', () => ReactReduxTSNavigation);
 
