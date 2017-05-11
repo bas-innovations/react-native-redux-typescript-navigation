@@ -1,4 +1,4 @@
-package com.reactreduxnavigation;
+package com.reactreduxtsnavigation;
 
 import android.app.Application;
 

@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { Button } from 'react-native';
 import { NavigationActions } from 'react-navigation';
@@ -9,12 +9,6 @@ const AuthButton = ({ logout, login, isLoggedIn }) => (
     onPress={isLoggedIn ? logout : login}
   />
 );
-
-AuthButton.propTypes = {
-  isLoggedIn: PropTypes.bool.isRequired,
-  logout: PropTypes.func.isRequired,
-  login: PropTypes.func.isRequired,
-};
 
 const mapStateToProps = state => ({
   isLoggedIn: state.auth.isLoggedIn,

@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "tsc": "tsc",
+    "clean": "rimraf artifacts",
+    "build": "npm run clean && npm run tsc --",    
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest"
   },
@@ -14,17 +17,26 @@
     "redux": "^3.6.0"
   },
   "devDependencies": {
+    "@types/jest": "^19.2.3",
+    "@types/react": "^15.0.24",
+    "@types/react-native": "^0.44.0",
     "babel-jest": "20.0.0",
     "babel-preset-react-native": "1.9.1",
+    "concurrently": "^3.4.0",
     "jest": "20.0.0",
-    "react-test-renderer": "16.0.0-alpha.6"
+    "react-test-renderer": "16.0.0-alpha.6",
+    "rimraf": "^2.6.1",
+    "tslint": "^5.2.0",
+    "typescript": "^2.3.2"
   },
   "jest": {
     "preset": "react-native",
-    "verbose": true,                                                  
-    "setupFiles": ["<rootDir>/jest-setup.js"],                                   
-    "transformIgnorePatterns": [                                                 
-      "node_modules/(?!(jest-)?react-native|react-navigation)"                   
+    "verbose": true,
+    "setupFiles": [
+      "<rootDir>/jest-setup.js"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|react-navigation)"
     ],
     "moduleNameMapper": {
       "^image![a-zA-Z0-9$_-]+$": "GlobalImageStub",

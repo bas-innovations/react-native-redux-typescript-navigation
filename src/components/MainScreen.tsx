@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { StyleSheet, View } from 'react-native';
 
 import LoginStatusMessage from './LoginStatusMessage';
@@ -13,15 +13,19 @@ const styles = StyleSheet.create({
   },
 });
 
-const MainScreen = () => (
-  <View style={styles.container}>
-    <LoginStatusMessage />
-    <AuthButton />
-  </View>
-);
+class MainScreen extends Component<any, any> {
+  static navigationOptions = {
+    title: 'Home Screen',
+  };
 
-MainScreen.navigationOptions = {
-  title: 'Home Screen',
-};
+  render(){
+    return (
+      <View style={styles.container}>
+        <LoginStatusMessage />
+        <AuthButton />
+      </View>
+    )
+  };
+}
 
 export default MainScreen;

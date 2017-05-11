@@ -1,13 +1,13 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import {
   Button,
-  StyleSheet,
+  //StyleSheet,
   Text,
   View,
 } from 'react-native';
 import { NavigationActions } from 'react-navigation';
-
+/*
 const styles = StyleSheet.create({
   welcome: {
     fontSize: 20,
@@ -15,14 +15,14 @@ const styles = StyleSheet.create({
     margin: 10,
   },
 });
-
+*/
 const LoginStatusMessage = ({ isLoggedIn, dispatch }) => {
   if (!isLoggedIn) {
     return <Text>Please log in</Text>;
   }
   return (
     <View>
-      <Text style={styles.welcome}>
+      <Text>
         {'You are "logged in" right now'}
       </Text>
       <Button
@@ -31,11 +31,6 @@ const LoginStatusMessage = ({ isLoggedIn, dispatch }) => {
       />
     </View>
   );
-};
-
-LoginStatusMessage.propTypes = {
-  isLoggedIn: PropTypes.bool.isRequired,
-  dispatch: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({

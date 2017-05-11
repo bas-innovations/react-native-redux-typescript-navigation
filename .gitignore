@@ -30,6 +30,8 @@ build/
 local.properties
 *.iml
 
+artifacts/
+
 # node.js
 #
 node_modules/

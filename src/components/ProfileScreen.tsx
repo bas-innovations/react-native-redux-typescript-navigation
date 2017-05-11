@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {
   StyleSheet,
   Text,
@@ -19,16 +19,21 @@ const styles = StyleSheet.create({
   },
 });
 
-const ProfileScreen = () => (
-  <View style={styles.container}>
-    <Text style={styles.welcome}>
-      Profile Screen
-    </Text>
-  </View>
-);
+class ProfileScreen extends Component<any, any> {
+  static navigationOptions = {
+    title: 'Profile',
+  };
 
-ProfileScreen.navigationOptions = {
-  title: 'Profile',
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.welcome}>
+          Profile Screen
+        </Text>
+      </View>
+  )}
 };
+
+
 
 export default ProfileScreen;
