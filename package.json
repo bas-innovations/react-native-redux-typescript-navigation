@@ -20,6 +20,15 @@
     "react-test-renderer": "16.0.0-alpha.6"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "verbose": true,                                                  
+    "setupFiles": ["<rootDir>/jest-setup.js"],                                   
+    "transformIgnorePatterns": [                                                 
+      "node_modules/(?!(jest-)?react-native|react-navigation)"                   
+    ],
+    "moduleNameMapper": {
+      "^image![a-zA-Z0-9$_-]+$": "GlobalImageStub",
+      "^[@./a-zA-Z0-9$_-]+\\.(png|gif)$": "RelativeImageStub"
+    }
   }
 }
